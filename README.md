@@ -1,27 +1,29 @@
-# Ngrouting
+# Angular Login
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
 
-## Development server
+## Objectives
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Create angular form
+* Explain how angular forms work
+* Cite examples of use cases for angular forms
+* Create angular routes
+* Explain how angular routes work
 
-## Code scaffolding
+## Setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Exercise
 
-## Build
+* Create a new component `LoginFormComponent`
+* Open the tests for it and use the stories to write failing tests.
+* Add `<login-form>` to `app.component.html`
+* Add nav links to `app.component.html` for: home, login, signup, logout.
+* Create a login form in `login-form.component.html` with 2 fields: email and password
+* Update `LoginFormComponent` with form inputs
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Stories
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- The homepage displays: title, nav links, login form
+- Logged in users cannot see the login or signup links
+- The login form validates email
+- The login form validates passwords with the following rules: must be longer than 5 characters.
+- The login form has a disabled submit button if the form isn't properly filled out
