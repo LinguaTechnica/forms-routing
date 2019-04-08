@@ -32,4 +32,9 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to ngrouting!');
   });
+
+  it('navigate to "" redirects you to /home', fakeAsync(() => { (1)
+    router.navigate(['']);
+    expect(location.path()).toBe('/home');
+  }));
 });
