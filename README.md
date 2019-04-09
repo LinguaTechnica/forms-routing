@@ -85,7 +85,7 @@ Once all tests are passing and all the stories are implemented, focus on styling
 **Stretch Goals**
 > Any one of these goals may require use of additional components, services, or classes. The goal is for you to use your new skills to solve the following problems.
 
-- has a User class with necessary fields, all strongly typed.
+- has a `User` class with necessary fields, all strongly typed.
 - has authorization: logged in users cannot see the login or signup links
 - has a service to manage user auth using `localStorage`.
 - has `localStorage` to persist a list of subscribers.
