@@ -7,7 +7,7 @@ There are 2 main approaches to forms in Angular: Reactive forms and Template-Dri
 In this exercise you will create both. The Subscribe form will be Template-Driven and the Signup and Login forms will be Reactive forms.
 
 ## Objectives
-> 2 blocks
+> 2-3 blocks
 
 * Create test driven angular forms
 * Explain how angular forms work
@@ -36,12 +36,13 @@ Always start with the tests and the stories before writing code.
 *Step 1: The Basic App*
 * Open the app tests and use the stories to write failing tests for `AppComponent`
 * Create a new component `LoginFormComponent`
+* Add tests for `LoginFormComponent` before implementing features.
 
 Think about how the component needs to work and then, one test at a time, add each feature of it.
 
 *Step 2: The Subscribe Form*
 * Create  a new `SubscribeFormComponent`
-* Use the stories to write failing tests
+* Use the stories to write failing tests.
 
 Think about how the component needs to work and then, one test at a time, add each feature of it.
 
@@ -84,9 +85,12 @@ Once all tests are passing and all the stories are implemented, focus on styling
 **Stretch Goals**
 > Any one of these goals may require use of additional components, services, or classes. The goal is for you to use your new skills to solve the following problems.
 
+- has a User class with necessary fields, all strongly typed.
 - has authorization: logged in users cannot see the login or signup links
-- add `localStorage` to persist a list of subscribers.
-- use `localStorage` for authentication.
+- has a service to manage user auth using `localStorage`.
+- has `localStorage` to persist a list of subscribers.
+- has `localStorage` for authentication.
+- has list of current subscribers on the 'Subscribe' page.
 - refactor: DRY up your app and apply SOLID principles.
 
 ### Troubleshooting
