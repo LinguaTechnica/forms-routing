@@ -88,3 +88,8 @@ Once all tests are passing and all the stories are implemented, focus on styling
 - add `localStorage` to persist a list of subscribers.
 - use `localStorage` for authentication.
 - refactor: DRY up your app and apply SOLID principles.
+
+### Troubleshooting
+
+**Test Errors**
+- `Can't bind to 'formControl' since it isn't a known property of 'input'.`: You probably need to update the testing module with the proper form imports.

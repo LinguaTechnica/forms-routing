@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { SubscribeFormComponent } from './subscribe-form.component';
 
@@ -8,7 +9,8 @@ describe('SubscribeFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SubscribeFormComponent ]
+      declarations: [ SubscribeFormComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));
@@ -19,7 +21,12 @@ describe('SubscribeFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create component', () => {
     expect(component).toBeTruthy();
+  });
+
+  xit('should require valid email', () => {
+    const form = component.subscribeForm.form.controls;
+    expect(form.email.valid).toBeFalsy();
   });
 });

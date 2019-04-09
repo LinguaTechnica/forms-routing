@@ -1,13 +1,13 @@
 <div>
-  <div>
+  <form (ngSubmit)="submit(subscribeForm)" #subscribeForm="ngForm">
     <label>
       Email:
-      <input type="email" [formControl]="email">
+      <input type="email" name="email" [(ngModel)]="email" required>
       <button type="submit">Subscribe</button>
     </label>
-  </div>
+  </form>
   <div>
-    {{ email.value }}
+    Current email: {{ email }}
   </div>
 
 </div>

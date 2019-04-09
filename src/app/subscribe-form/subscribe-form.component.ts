@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'subscribe-form',
@@ -7,11 +7,18 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./subscribe-form.component.css']
 })
 export class SubscribeFormComponent implements OnInit {
-  email = new FormControl('');
+  email: string;
+  @ViewChild('subscribeForm')subscribeForm: NgForm;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  submit(form) {
+    if (form.valid) {
+      console.log('Subscribed!');
+    }
   }
 
 }
