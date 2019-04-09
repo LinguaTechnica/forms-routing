@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="flexable" [formGroup]="signupForm">
+  <form class="flexable" [formGroup]="signupForm" (ngSubmit)="register()">
     <div class="flex-form">
       <label>First Name:
         <input name="firstName" type="text">
@@ -26,7 +26,7 @@
     <br />
     <div class="flex-form">
       <label>Password Confirmation:
-        <input name="passwordConf" type="password">
+        <input name="passwordConf" type="password" required>
       </label>
     </div>
     <br />

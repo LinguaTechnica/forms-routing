@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup-form',
@@ -7,15 +8,22 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./signup-form.component.css']
 })
 export class SignupFormComponent implements OnInit {
-  signupForm = this.fb.group({
-    firstName: [''],
-    lastName: [''],
-    email: [''],
-    password: [''],
-    passwordConf: ['']
-  });
+  signupForm: FormGroup;
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.signupForm = this.fb.group({
+      firstName: [''],
+      lastName: [''],
+      email: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      passwordConf: ['']
+    });
+  }
+
+  register() {
+    if (this.signupForm.valid) {
+      console.log('Registration successful.');
+    }
   }
 }
