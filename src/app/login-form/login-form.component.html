@@ -1,16 +1,42 @@
 <div class="justify-content-center py-3">
   <h2 class="row border-bottom">Login</h2>
-  <form>
+
+<!--  FORM BEGIN
+Always start with a regular form, no directives.
+Then add 1 field at a time, adding validation as you go! -->
+  <form (ngSubmit)="authenticate()" [formGroup]="loginForm">
+
+  <!--    EMAIL INPUT
+      FormControls have names represented by the keys of the FormGroup.
+      Take a look at the controller to see how HTML here mirrors controls there.-->
     <div class="row form-group">
       <label>Email:</label>
-      <input class="form-control" type="email">
+      <input class="form-control" type="email" formControlName="email" required>
+    </div>
+
+    <!--    EMAIL VALIDATION
+      FormControls have names represented by the keys of the FormGroup.
+      Take a look at the controller to see how HTML here mirrors controls there.-->
+    <div *ngIf="loginForm.controls.email.invalid && loginForm.controls.email.dirty" class="alert alert-danger">
+      Invalid email.
     </div>
     <br />
+
+    <!--    PASSWORD INPUT
+      FormControls have names represented by the keys of the FormGroup.
+      Take a look at the controller to see how HTML here mirrors controls there.-->
     <div class="row form-group">
       <label>Password:</label>
-      <input class="form-control" type="password">
+      <input class="form-control" type="password" formControlName="password" required>
+    </div>
+
+    <!--    PASSWORD VALIDATION
+      FormControls have names represented by the keys of the FormGroup.
+      Take a look at the controller to see how HTML here mirrors controls there.-->
+    <div *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.dirty" class="alert alert-danger">
+      Invalid password.
     </div>
     <br />
-    <button class="row btn btn-primary" type="submit">Login</button>
+    <input class="row btn btn-primary" type="submit" value="Login">
   </form>
 </div>

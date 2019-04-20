@@ -3,29 +3,47 @@
   <form [formGroup]="signupForm" (ngSubmit)="register()">
     <div class="form-group">
       <label>First Name:</label>
-      <input class="form-control" name="firstName" type="text">
+      <input class="form-control" name="firstName" type="text" formControlName="firstName">
     </div>
     <br />
     <div class="form-group">
       <label>Last Name:</label>
-      <input class="form-control" name="lastName" type="text">
+      <input class="form-control" name="lastName" type="text" formControlName="lastName">
     </div>
     <br />
     <div class="form-group">
       <label>Email:</label>
-      <input class="form-control" name="email" type="email">
+      <input class="form-control" name="email" type="email" formControlName="email" required>
+    </div>
+    <div *ngIf="signupForm.controls.email.invalid && signupForm.controls.email.dirty" class="alert alert-danger">
+      <div *ngIf="signupForm.controls.email.errors.email">
+        Email required.
+      </div>
     </div>
     <br />
     <div class="form-group">
       <label>Password:</label>
-      <input class="form-control" name="password" type="password">
+      <input class="form-control" name="password" type="password" formControlName="password" required>
+    </div>
+    <div *ngIf="signupForm.controls.password.invalid && signupForm.controls.password.dirty" class="alert alert-danger">
+      <div *ngIf="signupForm.controls.password.errors.required">
+        Password is required.
+      </div>
+      <div *ngIf="signupForm.controls.password.errors.minLength">
+        Password must be between 6-20 characters.
+      </div>
     </div>
     <br />
     <div class="form-group">
       <label>Password Confirmation:</label>
-      <input class="form-control" name="passwordConf" type="password" required>
+      <input class="form-control" name="passwordConf" type="password" formControlName="passwordConf" required>
+    </div>
+    <div *ngIf="signupForm.controls.passwordConf.invalid && signupForm.controls.passwordConf.dirty" class="alert alert-danger">
+      <div *ngIf="signupForm.controls.passwordConf.errors.required">
+        Passwords must match.
+      </div>
     </div>
     <br />
-    <button class="btn btn-primary" type="submit">Register</button>
+    <input class="btn btn-primary" type="submit" value="Register">
   </form>
 </div>
