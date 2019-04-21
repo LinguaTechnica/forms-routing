@@ -45,11 +45,16 @@ Think about how the component needs to work and then, one test at a time, add ea
 
 Think about how the component needs to work and then, one test at a time, add each feature of it.
 
-*Step 3: Links and Routing*
+*OPTIONAL: Step 3: Links and Routing*
 
-* Add router tests.
-* Add a nav bar `app.component.html`. Focus on making it functional and horizontal.
-* Add 2 links: Subscribe and Signup.
+This is a continuation of the 'noroutes' branch of this repo.
+
+* Add a nav bar `app.component.html`. Focus on making it responsive.
+* Add links: Home, Login, Subscribe and Signup.
+* The 'home' route should redirect to '/' path.
+* Add a nested route '/' for a new component, `AboutComponent`, with path '/about' 
+* Add data to the '/' route: copyright with value Copyright 2032
+* Use the data to display it within the component anywhere you like.
 
 Think about how routes need work and then, one test at a time, add each to the nav bar.
 
