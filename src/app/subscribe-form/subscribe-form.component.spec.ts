@@ -25,8 +25,8 @@ describe('SubscribeFormComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  xit('should require valid email', () => {
-    const form = component.subscribeForm.form.controls;
-    expect(form.email.valid).toBeFalsy();
+  it('should require valid email', () => {
+    const form = component.email;
+    expect(form.valid).toBeFalsy();
   });
 });

@@ -1,10 +1,13 @@
-# Angular Login
+# Angular Forms & Routing
 
 We'll create a simple application that has two forms: a login form and a signup form. We'll also cover Angular routing.
 
 There are 2 main approaches to forms in Angular: Reactive forms and Template-Driven forms. Reactive forms are scalable and immutable. Template driven forms are not.
 
 I this exercise we will create both. The Subscribe form will be Template-Driven and the Signup and Login forms will be Reactive forms.
+
+> **INSTRUCTOR NOTE:** If you've already introduced Angular testing, you can make tests required for the exercise steps.
+
 
 ## Objectives
 > 2 blocks
@@ -14,6 +17,8 @@ I this exercise we will create both. The Subscribe form will be Template-Driven 
 * Cite examples of use cases for angular forms
 * Create angular routes
 * Explain how angular routes work
+
+> **INSTRUCTOR NOTE:** Routing is the second part of the lesson and therefore optional. You can view the solution on the 'noroutes' branch of this repo. The 'solution' branch has everything including routes.
 
 ## Setup
 
@@ -29,19 +34,17 @@ To use forms in Angular you must have one of the following modules configured: `
 
 Below are a list of steps to *guide* you. At any given step, you are free to use *all* of the things you've learned about Angular and javascript to complete the app. You are not limited to the steps below. However, focus on mastery of Angular forms.
 
-You are allowed to create additional components, classes or add services. The only rule is that they must all be accompanied by tests.
-
-Always start with the tests and the stories before writing code.
+You are allowed to create additional components, classes or add services. 
 
 *Step 1: The Basic App*
-* Open the app tests and use the stories to write failing tests for `AppComponent`
 * Create a new component `LoginFormComponent`
+* OPTIONAL: Open the app tests and use the stories to write failing tests for `AppComponent`
 
 Think about how the component needs to work and then, one test at a time, add each feature of it.
 
 *Step 2: The Subscribe Form*
 * Create  a new `SubscribeFormComponent`
-* Use the stories to write failing tests
+* OPTIONAL: Use the stories to write failing tests
 
 Think about how the component needs to work and then, one test at a time, add each feature of it.
 

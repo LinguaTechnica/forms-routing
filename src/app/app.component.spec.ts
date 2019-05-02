@@ -9,8 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { SubscribeFormComponent } from './subscribe-form/subscribe-form.component';
+import {AboutComponent} from './about/about.component';
 
-describe('AppComponent', () => {
+xdescribe('AppComponent', () => {
   let location: Location;
   let router: Router;
 
@@ -44,7 +45,7 @@ describe('AppComponent', () => {
   });
 });
 
-xdescribe('Routing', () => {
+describe('Routing', () => {
   let location: Location;
   let router: Router;
 
@@ -64,7 +65,8 @@ xdescribe('Routing', () => {
         HomeComponent,
         LoginFormComponent,
         SubscribeFormComponent,
-        SignupFormComponent
+        SignupFormComponent,
+        AboutComponent
       ]
     }).compileComponents();
 
@@ -76,7 +78,7 @@ xdescribe('Routing', () => {
   it('navigate to /home', fakeAsync(() => {
     const fixture = TestBed.createComponent(HomeComponent);
     router.navigate(['home']);
-    tick();
+    // tick();
     fixture.detectChanges();
     console.log('INFO', location.path());
     expect(location.path()).toBe('/home');
