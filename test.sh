@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ng test
+ng test --browsers ChromeHeadless

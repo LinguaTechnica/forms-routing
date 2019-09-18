@@ -1,8 +1,8 @@
 # Install latest version of node
-FROM node:latest
+FROM trion/ng-cli-e2e
 
 # Create directory for app
-RUN mkdir /app
+#RUN mkdir /app
 
 # Set as current directory for RUN, ADD, COPY commands
 WORKDIR /app
@@ -15,7 +15,6 @@ ADD package.json /app
 
 # Install dependencies
 RUN npm install
-RUN npm install -g @angular/cli
 
 
 # Add entire student fork (overwrites previously added package.json)
