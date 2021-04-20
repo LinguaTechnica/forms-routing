@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { SubscribeFormComponent } from './subscribe-form/subscribe-form.component';
-import {AboutComponent} from './about/about.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {
